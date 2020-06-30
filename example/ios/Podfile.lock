@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - PDFViewer (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - PDFViewer (from `.symlinks/plugins/PDFViewer/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  PDFViewer:
+    :path: ".symlinks/plugins/PDFViewer/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  PDFViewer: be8c0702e79796cf1ee788718db57cb5dac89b4b
+
+PODFILE CHECKSUM: c34e2287a9ccaa606aeceab922830efb9a6ff69a
+
+COCOAPODS: 1.8.4
