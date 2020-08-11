@@ -18,12 +18,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class PDFViewer extends StatefulWidget {
-
   final String pdfUrl;
 
-  PDFViewer({
-    Key key, this.pdfUrl
-  }) : super(key: key);
+  PDFViewer({Key key, this.pdfUrl}) : super(key: key);
 
   PDFViewController pdfViewController;
 
@@ -31,7 +28,7 @@ class PDFViewer extends StatefulWidget {
   State<StatefulWidget> createState() => PDFViewerState();
 }
 
-class PDFViewerState extends State<PDFViewer> with AutomaticKeepAliveClientMixin {
+class PDFViewerState extends State<PDFViewer> {
   @override
   Widget build(BuildContext context) {
     if (defaultTargetPlatform == TargetPlatform.android) {
@@ -51,12 +48,8 @@ class PDFViewerState extends State<PDFViewer> with AutomaticKeepAliveClientMixin
   }
 
   void _onPlatformViewCreated(int id) {
-    (id);
     widget.pdfViewController = new PDFViewController(id, widget.pdfUrl);
   }
-
-  @override
-  bool get wantKeepAlive => true;
 }
 
 class PDFViewController {
