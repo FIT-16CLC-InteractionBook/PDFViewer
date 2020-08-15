@@ -28,7 +28,8 @@ class PDFViewer extends StatefulWidget {
   State<StatefulWidget> createState() => PDFViewerState();
 }
 
-class PDFViewerState extends State<PDFViewer> {
+class PDFViewerState extends State<PDFViewer>
+    with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
     if (defaultTargetPlatform == TargetPlatform.android) {
@@ -50,6 +51,9 @@ class PDFViewerState extends State<PDFViewer> {
   void _onPlatformViewCreated(int id) {
     widget.pdfViewController = new PDFViewController(id, widget.pdfUrl);
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
 
 class PDFViewController {
